@@ -1,5 +1,5 @@
 # Desafio-Cosplam 
-### Tem como finalidade verificar conhecimentos tecnicos de desenvolvimento Back-end.
+### Tem como finalidade verificar conhecimentos técnicos de desenvolvimento Back-end.
 
 ## Funcionalidades
 ### Busca de Notícias: Permite buscar notícias de um tema ou data específico em um intervalo de tempo.
