@@ -1,11 +1,11 @@
 # Desafio-Cosplam 
-## Tem como finalidade verificar conhecimentos tecnicos de desenvolvimento Back-end.
+### Tem como finalidade verificar conhecimentos tecnicos de desenvolvimento Back-end.
 
-# Funcionalidades
-## Busca de Notícias: Permite buscar notícias de um tema ou data específico em um intervalo de tempo.
+## Funcionalidades
+### Busca de Notícias: Permite buscar notícias de um tema ou data específico em um intervalo de tempo.
 
-# Estrutura do Projeto
-## Estrutura do projeto, mostrando os principais arquivos e diretórios:
+## Estrutura do Projeto
+### Estrutura do projeto, mostrando os principais arquivos e diretórios:
 
 projeto/
 ├── app.py               # Arquivo principal da aplicação Flask
@@ -23,13 +23,14 @@ projeto/
 ### Ferramentas de Desenvolvimento
 
  **Postman**: Utilizado para testar as requisições HTTP.
+ 
  **Flask**: Framework web utilizado para criar a aplicação.
 
-# Exemplo de Uso
-## Execute o arquivo app.py:
+## Exemplo de Uso
+### Execute o arquivo app.py:
   python app.py
   Acesse http://127.0.0.1:3000 no seu navegador para buscar notícias.
-## Execute no Postman o caminho:
+### Execute no Postman o caminho:
   GET/page=1&theme=sports&start_time=2001-06-11&end_time=2002-06-12
 
 
