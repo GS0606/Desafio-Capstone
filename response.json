@@ -48,17 +48,6 @@
         {
             "authors": "",
             "eyebrow": "businessweek",
-            "headline": "Cool Korea",
-            "publishedAt": "June 10, 2002",
-            "subtype": "Article",
-            "summary": "How it roared back from disaster and became a model for Asia",
-            "thumbnail": "",
-            "type": "Story",
-            "url": "https://www.bloomberg.com/news/articles/2002-06-09/cool-korea"
-        },
-        {
-            "authors": "",
-            "eyebrow": "businessweek",
             "headline": "Florida Baseball Teams: Down to Their Last Out?",
             "publishedAt": "June 10, 2002",
             "subtype": "Article",
@@ -66,6 +55,17 @@
             "thumbnail": "",
             "type": "Story",
             "url": "https://www.bloomberg.com/news/articles/2002-06-09/florida-baseball-teams-down-to-their-last-out"
+        },
+        {
+            "authors": "",
+            "eyebrow": "businessweek",
+            "headline": "Cool Korea",
+            "publishedAt": "June 10, 2002",
+            "subtype": "Article",
+            "summary": "How it roared back from disaster and became a model for Asia",
+            "thumbnail": "",
+            "type": "Story",
+            "url": "https://www.bloomberg.com/news/articles/2002-06-09/cool-korea"
         },
         {
             "authors": "",
