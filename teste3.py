@@ -3,7 +3,7 @@ import json
 from flask import Flask, request, jsonify
 from collections import Counter
 import matplotlib
-matplotlib.use('Agg')  # Usar o backend 'Agg' para evitar problemas de GUI
+matplotlib.use('Agg')  
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 def count_posts_by_day(json_data, target_day):
     counts = Counter()
     for result in json_data['results']:
-        date = result['publishedAt'][0] 
+        date = result['publishedAt']
         if date == target_day:
             counts[date] += 1
     return counts
@@ -25,7 +25,6 @@ def fetch_news():
     themes = ['brasil', 'corruption', 'semiconductors']
     all_counts = {theme: 0 for theme in themes}
 
-    # Percorrer todos os temas e arquivos de páginas
     for theme in themes:
         page_number = 1
         while True:
@@ -56,7 +55,7 @@ def fetch_news():
     plt.bar(themes, counts)
     plt.xlabel('Theme')
     plt.ylabel('Number of Posts')
-    plt.title(f'Number of Posts on {day} API DO CARALHO')
+    plt.title(f'Number of Posts on {day}')
     plt.tight_layout()
     plt.savefig('output/histogram.png')
 
