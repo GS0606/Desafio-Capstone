@@ -20,7 +20,7 @@ Busca artigos de notícias com base nos parâmetros fornecidos.
 'page' (opcional, padrão=1): O número da página para paginação.
 
 ### Exemplo de Requisição:
- GET http://127.0.0.1:5000/?theme=tecnologia&start_time=2023-01-01&end_time=2023-01-31&page=2
+ GET http://127.0.0.1:3000/fetch?theme=brasil, corruption, semiconductors&page=1&day=June 17, 2024
 
 ### Exemplo de Resposta:
  {

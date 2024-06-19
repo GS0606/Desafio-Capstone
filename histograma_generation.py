@@ -21,8 +21,7 @@ def fetch_news():
     day = request.args.get('day')
     if not day:
         return jsonify({"error": "Day parameter is required"}), 400
-
-    themes = ['brasil', 'corruption', 'semiconductors']
+    themes = request.args.get('themes').split(',')
     all_counts = {theme: 0 for theme in themes}
 
     for theme in themes:
