@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 # Desafio-Cosplam
+
+
 Esta aplicação é um serviço web simples baseado em Flask, projetado para contar e visualizar o número de postagens de notícias publicadas em um dia específico para vários temas. Ela processa arquivos JSON contendo dados de notícias e gera um histograma dos resultados.
 
 
 ### Tecnologias Utilizadas
+
+
 Python: Linguagem de programação principal utilizada.
 
 Flask: Framework leve para desenvolvimento de aplicações web WSGI.
@@ -18,6 +22,7 @@ JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dado
 
 
 ### Estrutura da Aplicação
+
 
 app = Flask(__name__): Inicializa a aplicação Flask.
 
@@ -84,6 +89,10 @@ http://localhost:3000/fetch?day=2024-06-12&themes=brasil,corruption,semiconducto
 ### Estrutura de Diretórios
 
 
+
+
+
+
 news-fetcher/
 ├── api_files/
 │   ├── brasil_1.json
@@ -96,6 +105,13 @@ news-fetcher/
 ├── histograma_generation.py: Arquivo principal da aplicação Flask.
 .py
 └── README.md
+
+
+
+
+
+
+
 
 
 Descrição dos Diretórios e Arquivos:
