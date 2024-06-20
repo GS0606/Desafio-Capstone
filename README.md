@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Desafio-Cosplam
+# Desafio-Capstone
 
 
 Esta aplicação é um serviço web simples baseado em Flask, projetado para contar e visualizar o número de postagens de notícias publicadas em um dia específico para vários temas. Ela processa arquivos JSON contendo dados de notícias e gera um histograma dos resultados.
