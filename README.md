@@ -67,7 +67,8 @@ news-fetcher/
 ├── output/
 │   ├── histogram.png
 │   └── news_data.json
-├── app.py
+├── histograma_generation.py: Arquivo principal da aplicação Flask.
+.py
 └── README.md
 
 Descrição dos Diretórios e Arquivos:
@@ -92,5 +93,4 @@ A aplicação verifica se o parâmetro day foi fornecido e retorna uma mensagem 
 Ela lida com erros de decodificação JSON e os registra no console.
 Ela garante que o diretório de saída exista antes de tentar salvar os arquivos.
 
-
-
+\**
