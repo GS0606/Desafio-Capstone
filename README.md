@@ -1,115 +1,96 @@
 <<<<<<< HEAD
 # Desafio-Cosplam
- Aplicação Flask seguindo a arquitetura MVC para buscar e exibir notícias da API Bloomberg.
+Esta aplicação é um serviço web simples baseado em Flask, projetado para contar e visualizar o número de postagens de notícias publicadas em um dia específico para vários temas. Ela processa arquivos JSON contendo dados de notícias e gera um histograma dos resultados.
 
-## Módulo app_routes
-Este repositório contém uma API simples baseada em Flask para buscar artigos de notícias com base em certos parâmetros, como tema, data de início, data de término e número da página.
+### Tecnologias Utilizadas
+Python: Linguagem de programação principal utilizada.
+Flask: Framework leve para desenvolvimento de aplicações web WSGI.
+Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.
+Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.
+OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.
+JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.
 
-### Visão Geral
-A API possui um endpoint '/' que aceita requisições GET e retorna uma resposta JSON contendo artigos de notícias. Os dados são buscados usando o módulo service_news_service, que lida com a lógica de negócios para buscar e processar artigos de notícias.
+### Estrutura da Aplicação
 
-### Endpoint
-GET /
-Busca artigos de notícias com base nos parâmetros fornecidos.
+app = Flask(__name__): Inicializa a aplicação Flask.
+count_posts_by_day(json_data, target_day): Função que conta o número de postagens publicadas em um dia específico.
+/fetch: Endpoint principal da aplicação, que processa a requisição, conta as postagens de notícias pelos temas especificados, salva os resultados em um arquivo JSON e gera um histograma
 
-### Parâmetros:
+### Endpoints
+/fetch
+Descrição: Busca o número de postagens de notícias para os temas especificados em um determinado dia, salva os resultados em um arquivo JSON e gera um histograma.
 
-'theme' : O tema ou categoria das notícias a serem buscadas.
-'start_time' : A data de início para os artigos de notícias.
-'end_time' : A data de término para os artigos de notícias.
-'page' (opcional, padrão=1): O número da página para paginação.
+Método: GET
+
+Parâmetros:
+
+day: Dia para o qual contar as postagens de notícias (formato: YYYY-MM-DD).
+themes: Lista separada por vírgulas dos temas para contar as postagens de notícias.
+Resposta: Objeto JSON contendo a contagem de postagens de notícias para cada tema.
 
 ### Exemplo de Requisição:
- GET http://127.0.0.1:3000/fetch?theme=brasil, corruption, semiconductors&page=1&day=June 17, 2024
+curl "http://localhost:3000/fetch?day=2023-06-18&themes=brasil,corruption,semiconductors"
 
 ### Exemplo de Resposta:
- {
-    "artigos": [
-        {
-            "titulo": "Artigo Exemplo",
-            "descricao": "Esta é uma descrição de exemplo de um artigo.",
-            "publicado_em": "2023-01-15T12:00:00Z",
-            "url": "http://exemplo.com/artigo"
-        },
-        ...
-    ],
-    "pagina": 2,
-    "total_paginas": 5,
-    "total_resultados": 50
+{
+    "brasil": 5,
+    "corruption": 3,
+    "semiconductors": 7
 }
 
+## Como Executar a Aplicação
 
-## Módulo service_news_service
- O módulo service_news_service contém a função get_news_service, que é responsável por buscar e processar os artigos de notícias com base nos parâmetros fornecidos.
+1-Clonar o Repositório:
+git clone <url-do-repositorio>
+cd <diretorio-do-repositorio>
 
-### Exemplo de Uso:
- from service_news_service import service_news_service
+2-Instalar Dependências: 
 
-tema = "tecnologia"
-data_inicio = "2023-01-01"
-data_fim = "2023-01-31"
-pagina = 2
+Certifique-se de ter Python instalado e, em seguida, instale os pacotes necessários usando pip:
+pip install Flask matplotlib
 
-dados = service_news_service.get_news_service(tema, data_inicio, data_fim, pagina)
-print(dados)
+3-Executar a Aplicação:
+python histograma_generation.py
 
-##  Módulo storage_news_storage
- Este repositório contém um script Python para buscar artigos de notícias do Bloomberg com base em parâmetros específicos como tema, data de início, data de término e número da página.
+4-Acessar o Endpoint: Use uma ferramenta como Postman ou seu navegador web para enviar uma requisição GET para:
 
-### Visão Geral
- O função fetch_news usa a biblioteca requests para fazer uma requisição GET para a API de busca do Bloomberg. Os resultados são salvos em um arquivo JSON local e retornados como um dicionário Python.
+http://localhost:3000/fetch?day=2024-06-12&themes=brasil,corruption,semiconductors
 
-### Armazenamento da Resposta
- A resposta da API é salva em um arquivo chamado response.json no diretório atual. O conteúdo do arquivo é formatado com indentação para facilitar a leitura.
+### Estrutura de Diretórios
 
-##  Módulo storage_news_storage
- Este repositório contém um módulo Python que serve como uma camada de serviço para buscar artigos de notícias utilizando uma função de armazenamento (fetch_news). O módulo fornece uma interface simples para obter notícias com base em tema, data de início, data de término e número da página.
+news-fetcher/
+├── api_files/
+│   ├── brasil_1.json
+│   ├── corruption_1.json
+│   ├── semiconductors_1.json
+│   └── ... (outros arquivos JSON)
+├── output/
+│   ├── histogram.png
+│   └── news_data.json
+├── app.py
+└── README.md
 
-### Visão Geral
- A classe service_news_service fornece um método estático get_news_service que chama a função fetch_news do módulo storage_news_storage para buscar e retornar artigos de notícias.
+Descrição dos Diretórios e Arquivos:
 
-##  Módulo main 
- Este repositório contém um aplicativo Flask que serve uma API para buscar artigos de notícias com base em tema, data de início, data de término e número da página. O aplicativo utiliza módulos personalizados para lidar com a lógica de negócios e o armazenamento dos dados.
+*news-fetcher/*: Diretório raiz do projeto.
+*api_files/*: Diretório contendo os arquivos JSON com dados de notícias. Cada arquivo segue o formato <tema>_<número_da_página>.json.
+*brasil_1.json*: Arquivo JSON com notícias sobre o tema "brasil".
+*corruption_1.json*: Arquivo JSON com notícias sobre o tema "corruption".
+*semiconductors_1.json*: Arquivo JSON com notícias sobre o tema "semiconductors".
+*output/*: Diretório onde são salvos o arquivo JSON de saída e a imagem do histograma.
+*histogram.png*: Imagem PNG contendo o histograma do número de postagens por tema.
+*news_data.json*: Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
+*histograma_generation.py*: Arquivo principal da aplicação Flask.
+*README.md*: Arquivo de documentação com informações sobre a aplicação, como instalar, executar e usar.
+### Arquivos de Saída
 
-### Visão Geral
- O aplicativo Flask é iniciado a partir do módulo 'app_runner.py', que importa a instância do aplicativo a partir do módulo 'app_routes.py'. O aplicativo está configurado para rodar na porta 3000.
+*news_data.json*: Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
+*histogram.png*: Arquivo de imagem PNG contendo o histograma do número de postagens por tema.
 
+### Tratamento de Erros
+A aplicação verifica se o parâmetro day foi fornecido e retorna uma mensagem de erro se estiver ausente.
+Ela lida com erros de decodificação JSON e os registra no console.
+Ela garante que o diretório de saída exista antes de tentar salvar os arquivos.
 
-=======
-# Desafio-Cosplam 
-### Tem como finalidade verificar conhecimentos técnicos de desenvolvimento Back-end.
-
-## Funcionalidades
-### Busca de Notícias: Permite buscar notícias de um tema ou data específico em um intervalo de tempo.
-
-## Estrutura do Projeto
-### Estrutura do projeto, mostrando os principais arquivos e diretórios:
-
-projeto/
-├── app.py               # Arquivo principal da aplicação Flask
-├── service_news_service.py  # Módulo que contém o serviço para obter notícias
-├── storage_news_storage.py  # Módulo para armazenamento de notícias
-├── README.md            # Este arquivo README
-└── ...
-
-## Tecnologias Utilizadas
-
-### Linguagem de Programação
-
-**Python**
-
-### Ferramentas de Desenvolvimento
-
- **Postman**: Utilizado para testar as requisições HTTP.
- 
- **Flask**: Framework web utilizado para criar a aplicação.
-
-## Exemplo de Uso
-### Execute o arquivo app.py:
-  python app.py
-  Acesse http://127.0.0.1:3000 no seu navegador para buscar notícias.
-### Execute no Postman o caminho:
-  GET/page=1&theme=sports&start_time=2001-06-11&end_time=2002-06-12
->>>>>>> 59a0048b20a1be9b02cc059952827527a22bc899
 
 
