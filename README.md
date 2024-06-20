@@ -119,7 +119,7 @@ Descrição dos Diretórios e Arquivos:
 
 **news_data.json :**Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
 
-**histograma_generation.py :** Arquivo principal da aplicação Flask.
+**histogram_generation.py :** Arquivo principal da aplicação Flask.
 
 **README.md :** Arquivo de documentação com informações sobre a aplicação, como instalar, executar e usar.
 
