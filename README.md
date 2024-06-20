@@ -3,19 +3,24 @@
 Esta aplicação é um serviço web simples baseado em Flask, projetado para contar e visualizar o número de postagens de notícias publicadas em um dia específico para vários temas. Ela processa arquivos JSON contendo dados de notícias e gera um histograma dos resultados.
 
 ### Tecnologias Utilizadas
-Python: Linguagem de programação principal utilizada.\**
-Flask: Framework leve para desenvolvimento de aplicações web WSGI.\**
-Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.\**
-Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.\**
-OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.\**
-JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.\**
+Python: Linguagem de programação principal utilizada.
+
+Flask: Framework leve para desenvolvimento de aplicações web WSGI.
+
+Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.
+
+Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.
+
+OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.
+
+JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.
 
 ### Estrutura da Aplicação
 
 app = Flask(__name__): Inicializa a aplicação Flask.
 count_posts_by_day(json_data, target_day): Função que conta o número de postagens publicadas em um dia específico.
 /fetch: Endpoint principal da aplicação, que processa a requisição, conta as postagens de notícias pelos temas especificados, salva os resultados em um arquivo JSON e gera um histograma
-\**
+
 ### Endpoints
 /fetch
 Descrição: Busca o número de postagens de notícias para os temas especificados em um determinado dia, salva os resultados em um arquivo JSON e gera um histograma.
