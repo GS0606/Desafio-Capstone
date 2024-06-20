@@ -4,12 +4,12 @@ Esta aplicação é um serviço web simples baseado em Flask, projetado para con
 
 ### Tecnologias Utilizadas
 Python: Linguagem de programação principal utilizada.\**
-Flask: Framework leve para desenvolvimento de aplicações web WSGI.
-Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.
-Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.
-OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.
-JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.
-\**
+Flask: Framework leve para desenvolvimento de aplicações web WSGI.\**
+Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.\**
+Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.\**
+OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.\**
+JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.\**
+
 ### Estrutura da Aplicação
 
 app = Flask(__name__): Inicializa a aplicação Flask.
