@@ -33,19 +33,15 @@ count_posts_by_day(json_data, target_day): Função que conta o número de posta
 
 ### Endpoints
 
-
-/fetch
-Descrição: Busca o número de postagens de notícias para os temas especificados em um determinado dia, salva os resultados em um arquivo JSON e gera um histograma.
-
 Método: GET
 
 Parâmetros:
 
-day: Dia para o qual contar as postagens de notícias (formato: YYYY-MM-DD).
+**day:** Dia para o qual contar as postagens de notícias (formato: YYYY-MM-DD).
 
-themes: Lista separada por vírgulas dos temas para contar as postagens de notícias.
+**themes**: Lista separada por vírgulas dos temas para contar as postagens de notícias.
 
-Resposta: Objeto JSON contendo a contagem de postagens de notícias para cada tema.
+**Resposta:** Objeto JSON contendo a contagem de postagens de notícias para cada tema.
 
 
 ### Exemplo de Requisição:
