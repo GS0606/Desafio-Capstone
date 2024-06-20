@@ -52,13 +52,13 @@ curl "http://localhost:3000/fetch?day=2023-06-18&themes=brasil,corruption,semico
 
 ### Exemplo de Resposta:
 
-
+```plaintext
 {
     "brasil": 5,
     "corruption": 3,
     "semiconductors": 7
 }
-
+```
 
 ## Como Executar a Aplicação
 
