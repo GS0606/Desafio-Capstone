@@ -47,16 +47,16 @@ Parâmetros:
 ### Exemplo de Requisição:
 
 
-curl "http://localhost:3000/fetch?day=2023-06-18&themes=brasil,corruption,semiconductors"
+http://127.0.0.1:3000/fetch?themes=semiconductors,brasil,corruption&page=3&day=June 12, 2024
 
 
 ### Exemplo de Resposta:
 
 ```plaintext
 {
-    "brasil": 5,
-    "corruption": 3,
-    "semiconductors": 7
+    "brasil": 8,
+    "corruption": 5,
+    "semiconductors": 9
 }
 ```
 
