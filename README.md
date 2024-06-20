@@ -92,7 +92,7 @@ http://localhost:3000/fetch?day=2024-06-12&themes=brasil,corruption,semiconducto
 
 
 
-
+```plaintext
 news-fetcher/
 ├── api_files/
 │   ├── brasil_1.json
@@ -105,6 +105,7 @@ news-fetcher/
 ├── histograma_generation.py: Arquivo principal da aplicação Flask.
 .py
 └── README.md
+```
 
 
 
