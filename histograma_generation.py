@@ -39,14 +39,13 @@ def fetch_news():
                     print(f"Erro ao decodificar o arquivo: {file_path}")
             page_number += 1
 
-    # Salvar os resultados em um arquivo JSON
     if not os.path.exists('output'):
         os.makedirs('output')
 
     with open('output/news_data.json', 'w') as json_file:
         json.dump(all_counts, json_file, indent=4)
 
-    # Gerar o histograma
+    
     themes = list(all_counts.keys())
     counts = list(all_counts.values())
 
