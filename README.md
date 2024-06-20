@@ -8,17 +8,17 @@ Esta aplicação é um serviço web simples baseado em Flask, projetado para con
 ### Tecnologias Utilizadas
 
 
-Python: Linguagem de programação principal utilizada.
+**Python:** Linguagem de programação principal utilizada.
 
-Flask: Framework leve para desenvolvimento de aplicações web WSGI.
+**Flask:** Framework leve para desenvolvimento de aplicações web WSGI.
 
-Matplotlib: Biblioteca de plotagem utilizada para gerar o histograma.
+**Matplotlib:** Biblioteca de plotagem utilizada para gerar o histograma.
 
-Collections (Counter): Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.
+**Collections (Counter):** Contêiner da biblioteca padrão do Python utilizado para contar a ocorrência de elementos.
 
-OS: Módulo Python que fornece funcionalidades dependentes do sistema operacional.
+**OS:** Módulo Python que fornece funcionalidades dependentes do sistema operacional.
 
-JSON: Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.
+**JSON:** Formato de intercâmbio de dados leve utilizado para manipulação de dados JSON.
 
 
 ### Estrutura da Aplicação
@@ -67,13 +67,13 @@ curl "http://localhost:3000/fetch?day=2023-06-18&themes=brasil,corruption,semico
 ## Como Executar a Aplicação
 
 
-1-Clonar o Repositório:
+**1**-Clonar o Repositório:
 
-git clone "url-do-repositorio"
+git clone *"url-do-repositorio"*
 
-cd "diretorio-do-repositorio"
+cd *"diretorio-do-repositorio"*
 
-2-Instalar Dependências: 
+**2**-Instalar Dependências: 
 
 Certifique-se de ter Python instalado e, em seguida, instale os pacotes necessários usando pip:
 pip install Flask matplotlib
@@ -87,9 +87,6 @@ http://localhost:3000/fetch?day=2024-06-12&themes=brasil,corruption,semiconducto
 
 
 ### Estrutura de Diretórios
-
-
-
 
 
 ```plaintext
@@ -108,42 +105,35 @@ news-fetcher/
 ```
 
 
-
-
-
-
-
-
-
 Descrição dos Diretórios e Arquivos:
 
-**news-fetcher/**: Diretório raiz do projeto.
+**news-fetcher/ :** Diretório raiz do projeto.
 
-**api_files/**: Diretório contendo os arquivos JSON com dados de notícias. Cada arquivo segue o formato <tema>_<número_da_página>.json.
+**api_files/ :** Diretório contendo os arquivos JSON com dados de notícias. Cada arquivo segue o formato <tema>_<número_da_página>.json.
 
-**brasil_1.json**: Arquivo JSON com notícias sobre o tema "brasil".
+**brasil_1.json :** Arquivo JSON com notícias sobre o tema "brasil".
 
-**corruption_1.json**: Arquivo JSON com notícias sobre o tema "corruption".
+**corruption_1.json :** Arquivo JSON com notícias sobre o tema "corruption".
 
-**semiconductors_1.json**: Arquivo JSON com notícias sobre o tema "semiconductors".
+**semiconductors_1.json :** Arquivo JSON com notícias sobre o tema "semiconductors".
 
-**output/**: Diretório onde são salvos o arquivo JSON de saída e a imagem do histograma.
+**output/ :** Diretório onde são salvos o arquivo JSON de saída e a imagem do histograma.
 
-**histogram.png**: Imagem PNG contendo o histograma do número de postagens por tema.
+**histogram.png :** Imagem PNG contendo o histograma do número de postagens por tema.
 
-**news_data.json**: Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
+**news_data.json :**Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
 
-**histograma_generation.py**: Arquivo principal da aplicação Flask.
+**histograma_generation.py :** Arquivo principal da aplicação Flask.
 
-**README.md**: Arquivo de documentação com informações sobre a aplicação, como instalar, executar e usar.
+**README.md :** Arquivo de documentação com informações sobre a aplicação, como instalar, executar e usar.
 
 
 ### Arquivos de Saída
 
 
-**news_data.json**: Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
+**news_data.json :** Arquivo JSON contendo a contagem de postagens de notícias para cada tema.
 
-**histogram.png**: Arquivo de imagem PNG contendo o histograma do número de postagens por tema.
+**histogram.png :** Arquivo de imagem PNG contendo o histograma do número de postagens por tema.
 
 
 ### Tratamento de Erros
