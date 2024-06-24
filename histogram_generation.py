@@ -38,6 +38,7 @@ def fetch_news():
                 except json.JSONDecodeError:
                     print(f"Erro ao decodificar o arquivo: {file_path}")
             page_number += 1
+    
 
     if not os.path.exists('output'):
         os.makedirs('output')
